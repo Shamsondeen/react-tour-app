@@ -290,8 +290,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div class="u-center-text u-margin-top-medium">
-                            <Link to="/story">
-                            <a className="btn-text">Read all stories &rarr;</a>
+                            <Link to="/story" className="btn-text">Read all stories &rarr;
                             </Link>
                         </div>
                     </section>

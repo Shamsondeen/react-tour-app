@@ -36,8 +36,8 @@ const Tours = () => {
                                 <div className="card__side card__side--back card__side--back-1">
                                     <div className="card__cta">
                                         <div className="card__price-box">
-                                            <p class="card__price-only">Only</p>
-                                            <p class="card__price-value">#40000</p>
+                                            <p className="card__price-only">Only</p>
+                                            <p className="card__price-value">#40000</p>
                                         </div>
                                         <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
                                     </div>
@@ -73,11 +73,11 @@ const Tours = () => {
                                 <div>
                                     <div className="card__side card__side--back card__side--back-2">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#25000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#25000</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -110,11 +110,11 @@ const Tours = () => {
                                 <div>
                                     <div className="card__side card__side--back card__side--back-3">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#20000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#20000</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
