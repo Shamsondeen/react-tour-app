@@ -7,6 +7,7 @@ import About from "./component/About";
 import Story from "./component/Story";
 import Tours from "./component/Tours";
 import Footer from './component/Footer';
+import Default from "./component/Default";
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/story" component={Story} />
           <Route path="/tours" component={Tours} />
           <Route path="/about" component={About} />
+          <Route component={Default} />
         </Switch>
         <Footer />
       </React.Fragment>

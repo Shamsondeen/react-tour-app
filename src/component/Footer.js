@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../ika.png';
 
-export default class Footer extends Component {
-    render() {
+const Footer = () => {
         return (
             <div>
                 {/* Footer */}
@@ -56,4 +55,6 @@ export default class Footer extends Component {
             </div>
         )
     }
-}
+
+
+export default Footer;

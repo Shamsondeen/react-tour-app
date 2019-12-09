@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export default class Navigation extends Component {
-    render() {
-        return (
+const Navigation= () => {
+    return (
             <NavWrapper>
                 <div className="navigation">
                     <input type="checkbox" className="navigation__checkbox" id="navi-toggle" />
@@ -17,17 +17,17 @@ export default class Navigation extends Component {
 
                     <nav className="navigation__nav">
                         <ul className="navigation__list">
-                            <li class="navigation__item"><a href="/" class="navigation__link"><span>01</span>Home</a></li>
-                            <li class="navigation__item"><a href="/about" class="navigation__link"><span>02</span>About Us</a></li>
-                            <li class="navigation__item"><a href="/tours" class="navigation__link"><span>03</span>Popular Tours</a></li>
-                            <li class="navigation__item"><a href="/story" class="navigation__link"><span>04</span>Stories</a></li>
+                            <li class="navigation__item"><Link to="/"><a class="navigation__link"><span>01</span>Home</a></Link></li>
+                            <li class="navigation__item"><Link to="/about"><a class="navigation__link"><span>02</span>About Us</a></Link></li>
+                            <li class="navigation__item"><Link to="/tours"><a class="navigation__link"><span>03</span>Popular Tours</a></Link></li>
+                            <li class="navigation__item"><Link to="/story"><a  class="navigation__link"><span>04</span>Stories</a></Link></li>
                         </ul>
                     </nav>
                 </div>
             </NavWrapper>
         );
     }
-}
+    export default Navigation;
 
 const NavWrapper = styled.nav `
 /*Navigation*/

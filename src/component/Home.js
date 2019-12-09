@@ -10,7 +10,7 @@ import n6 from "../assets/n6.jpg";
 import styled from 'styled-components';
 
 
-const Booking = () => {
+const Home = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('');
 
@@ -28,8 +28,9 @@ const Booking = () => {
                             <span class="heading-primary__sub">is where lifes happens</span>
                         </h1>
 
-
-                        <a href="/tours" className="btn btn__animated btn__white">Discover our tours</a>
+                        <Link to="/tours">
+                        <a className="btn btn__animated btn__white">Discover our tours</a>
+                        </Link>
                     </div>
                 </header>
                 <main>
@@ -233,7 +234,9 @@ const Booking = () => {
                         </div>
                         {/*Button*/}
                         <div class="u-center-text u-margin-top-huge">
-                            <a href="/tours" className="btn btn__green">Discover all tours</a>
+                            <Link to="/tours">
+                            <a className="btn btn__green">Discover all tours</a>
+                            </Link>
                         </div>
                         {/* End Of Button*/}
                     </section>
@@ -287,7 +290,9 @@ const Booking = () => {
                             </div>
                         </div>
                         <div class="u-center-text u-margin-top-medium">
-                            <a href="/story" className="btn-text">Read all stories &rarr;</a>
+                            <Link to="/story">
+                            <a className="btn-text">Read all stories &rarr;</a>
+                            </Link>
                         </div>
                     </section>
                     {/* End Of Story Section*/}
@@ -328,7 +333,7 @@ const Booking = () => {
         )
 }
 
-    export default Booking;
+    export default Home;
 
 
 

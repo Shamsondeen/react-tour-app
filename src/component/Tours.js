@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Tours extends Component {
-    render() {
+const Tours = () => {
         return (
             <div>
                 <section className="section-tours">
@@ -467,4 +466,4 @@ export default class Tours extends Component {
             </div>
         )
     }
-}
+    export default Tours;
