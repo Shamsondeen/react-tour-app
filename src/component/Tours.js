@@ -175,7 +175,7 @@ const Tours = () => {
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 Daya Tour</li>
+                                            <li>2 Days Tour</li>
                                             <li>Visit to Erinjiyan Ekiti</li>
                                             <li>Visit to Oni Of Ife's Palace</li>
                                             <li>Visit To Oba Of Lagos Palace</li>
