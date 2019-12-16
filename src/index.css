@@ -164,8 +164,8 @@ body {
 
 @media only screen and (max-width: 37.5em) {
     .heading-primary__main {
-        letter-spacing: 1rem;
-        font-family: 5rem;
+        letter-spacing: .6rem;
+        font-size: 5rem;
     }
 }
 

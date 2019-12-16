@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../ika.png';
 
 const Footer = () => {
@@ -40,15 +41,15 @@ const Footer = () => {
                         </div>
                     </div>
                    <div className="footer__social">
-                        <a href="https:/www.facebook.com/ogundipe.samson.14">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/shamzy112">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https:/www.facebook.com/ogundipe.samson.14">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        <Link to="https:/www.facebook.com/ogundipe.samson.14">
+                            <i class="fab fa-facebook" />
+                        </Link>
+                        <Link to="https://www.instagram.com/shamzy112">
+                            <i class="fab fa-instagram" />
+                        </Link>
+                        <Link to="https:/www.facebook.com/ogundipe.samson.14">
+                            <i class="fab fa-twitter" />
+                        </Link>
                     </div>
                 </footer>
                 {/* End Of Footer */}
