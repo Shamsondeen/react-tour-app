@@ -1,0 +1,76 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, #5eaffaaf, #5d4cf5d8), url('../../assets/tour.jpeg') !important;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: (0 0)) {
+    .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 7rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary__main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 4rem;
+    animation: moveInLeft 1s ease-out;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary__main {
+        letter-spacing: .6rem;
+        font-size: 5rem;
+    }
+}
+
+.heading-primary__sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    animation: moveInRight 1s ease-out;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary__sub {
+        letter-spacing: .5rem;
+    }
+}

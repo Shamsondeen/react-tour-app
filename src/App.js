@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import Navigation from "./component/Navigation";
+import Navigation from "./component/Navigation/Navigation";
 import Home from "./component/Home";
-import About from "./component/About";
-import Story from "./component/Story";
-import Tours from "./component/Tours";
-import Footer from './component/Footer';
+import About from "./component/About/About";
+import Story from "./component/Story/Story";
+import Tours from "./component/Tours/Tours";
 import Default from "./component/Default";
 
 
@@ -22,7 +21,6 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route component={Default} />
         </Switch>
-        <Footer />
       </React.Fragment>
     );
   }

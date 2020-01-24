@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react';
+import './Tours.css';
+import Footer from '../Footer/Footer';
 
 const Tours = () => {
         return (
@@ -463,6 +465,7 @@ const Tours = () => {
 
                     </div>
                 </section>
+                <Footer />
             </div>
         )
     }

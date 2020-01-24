@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
+import './Features.css';
 
-const About = () => {
+export default class Features_Section extends Component {
+    render() {
         return (
             <div>
-                <section className="section-about">
-                    <div className="u-center-text u-margin-botton-big">
-                        <h5 className="heading-secondary">
-                            Tour Nature
-                        </h5>
-                        <h3 className="heading-tertiary-2">
-                        Is a Nigeria based tour organizing company who help you <i class="feature-box__icon" class="far fa-hand-point-down"></i> 
-                        </h3>
-                    </div>
-                    <div className="row">
+            <section className="section-features">
+                        <div className="row">
                             <div className="col-1-of-4">
                                 <div className="feature-box">
                                     <i class="feature-box__icon icon-basic-world"></i>
@@ -57,8 +51,10 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
-                </section>
+                    </section> 
             </div>
         )
     }
-    export default About;
+}
+
+

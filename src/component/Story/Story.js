@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import video from "../assets/video.mp4";
-import videos from "../assets/video.webm";
-import sharme from "../assets/ika.jpg";
+import video from "../../assets/video.mp4";
+import videos from "../../assets/video.webm";
+import sharme from "../../assets/ika.jpg";
+import Footer from '../Footer/Footer';
+
+import './Story.css';
 
 export default class Story extends Component {
     render() {
@@ -105,6 +108,7 @@ export default class Story extends Component {
 
                 </section>
                 {/* End Of Story Section*/}
+                <Footer />
 
             </div>
         )
