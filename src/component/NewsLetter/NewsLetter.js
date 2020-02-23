@@ -7,7 +7,7 @@ const NewsLetter = () => {
     const [email, setEmail] = useState('');
 
         return (
-            <div>
+            <React.Fragment>
                  {/* Booking Section*/}
                  <section className="NewsLetter">
                         <div className="row">
@@ -37,7 +37,7 @@ const NewsLetter = () => {
                         </div>
                     </section>
                     {/* End Of Booking Section*/}
-            </div>
+            </React.Fragment>
         )
     }
 

@@ -20,6 +20,7 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     transition: transform .3s;
+    animation-iteration-count: infinite;
 }
 
 @media only screen and (max-width: 56.25em) {

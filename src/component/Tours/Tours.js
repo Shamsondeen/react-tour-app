@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Tours.css';
 import Footer from '../Footer/Footer';
 
-const Tours = () => {
+
+export default class Tours extends Component {
+    state = {
+        // TITTLES
+        title: 'Badagry Xmas plore',title2: 'Southwest Tour',title3: 'Beach Hangout',title4: 'DECEMBER HANG-OUT',title5: 'Cultural Tour',title6: 'Abuja City Tour',
+        title7: 'Lagos city tour',title8: 'Lekki C Centre tour',title9: 'Almart Resort tour',title10: 'Abeokuta City Tour',title11: 'Kano City Tour',title12: 'Benin City Tour',
+
+        // LISTS
+        lists: [ '2 days tours', 'One night in whispering palm', 'Pedal boating', 'First Story Building', 'Bicycle Boaty'],
+        lists2: [ '7 Days Tour', ' Mountain Hiking', ' Swimming', 'Camp Fire', ' Visit To Erinjiyan Ekiti'],
+        lists3: [ 'A Day Tour', 'Swimming', 'Kayaking', ' Boat Ride', ' Pedal Boating'],lists4: [ ' A Day Tour', ' Visit To Whispering palm', ' Visit To First Story Building', ' Visit To Brazilian Baracoon', ' Visit To Point Of No Return'],
+        lists5: [ '2 Days Tour', 'Visit to Erinjiyan Ekiti', "Visit to Oni Of Ife's Palace", 'Visit To Oba Of Lagos Palace', 'Visit To Osun/Oshogbo Shrine'],lists6: [ '3 Days Tour', 'Visit To Aso Rock', 'Visit Zuma Rock', 'Visit To Presidential Villa', 'Visit To Senate House'],
+        lists7: [ '2 days tours', 'One night in Eko Hotel', 'Visit To Eko Atlantic', "Visit To Governor's Office", "Visit To Tinubu's House"],lists8: [ 'A Day Tour', 'Swimming', 'Kayaking', 'Boat Ride', 'Pedal Boating'],
+        lists9: [ 'A Day Tour', 'Mountain Hiking', 'Swimming', 'Camp Fire', 'Photography'], lists10: [ '2 days tours', 'Visit To Olumo Rock', 'Visit To Government House', 'Visit To Mapoly', "Visit To OBASANJO'S Library"],
+        lists11: [ '2 Days Tour', "Visit To Emir's Palace", 'Visit To Government House', "Visit To Kano's Market", 'Visit To University Of Kano'],lists12: [ '2 Days Tour', 'Visit To Oba Of Benin Palace', 'Visit To UNIBEN', 'Camp Fire', 'Visit To Benin Market'],
+
+        // TOUR PRICE
+        price: '40000', price2: '25000',price3: '20000', price4: '10000', price5: '20000', price6: '25000', price7: '40000',
+        price8: '20000',price9: '10000',price10: '25000',price11: '30000',price12: '10000'
+
+    };
+    render() {
         return (
-            <div>
+            <React.Fragment>
                 <section className="section-tours">
                     <div className="u-center-text u-margin-botton-big">
                         <h2 className="heading-secondary">
@@ -15,23 +36,19 @@ const Tours = () => {
 
                         {/* Card One */}
                         <div className="col-1-of-3">
-                            <div className="card">
-                                <div className="card__side card__side--front wow fadeInLeft" data-wow-dutarion="1s" data-wow-delay=".9s">
+                            <div className="card" >
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".5s">
                                     <div className="card__picture card__picture--1">
                                         &nbsp;
                                         </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--1">
-                                            Badagry Xmas plore
-                                            </span>
+                                            {this.state.title}
+                                        </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 days tours</li>
-                                            <li>One night in whispering palm</li>
-                                            <li>Pedal boating</li>
-                                            <li>First Story Building</li>
-                                            <li>Bicycle Boaty</li>
+                                        {this.state.lists.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
@@ -39,9 +56,9 @@ const Tours = () => {
                                     <div className="card__cta">
                                         <div className="card__price-box">
                                             <p className="card__price-only">Only</p>
-                                            <p className="card__price-value">#40000</p>
+                                            <p className="card__price-value">#{this.state.price}</p>
                                         </div>
-                                        <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                        <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                     </div>
                                 </div>
                             </div>
@@ -51,23 +68,19 @@ const Tours = () => {
                         {/* Card Two */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".9s">
                                     <div className="card__picture card__picture--2">
                                         &nbsp;
                                         </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--2">
-                                            Southwest Tour
-                                            </span>
+                                            {this.state.title2}
+                                        </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
                                             <ul>
-                                                <li>7 Days Tour</li>
-                                                <li>Mountain Hiking</li>
-                                                <li>Swimming</li>
-                                                <li>Camp Fire</li>
-                                                <li>Visit To Erinjiyan Ekiti</li>
+                                            {this.state.lists2.map(list => <li key={list}>{list}</li>)}
                                             </ul>
                                         </ul>
                                     </div>
@@ -77,7 +90,7 @@ const Tours = () => {
                                         <div className="card__cta">
                                             <div className="card__price-box">
                                                 <p className="card__price-only">Only</p>
-                                                <p className="card__price-value">#25000</p>
+                                                <p className="card__price-value">#{this.state.price2}</p>
                                             </div>
                                             <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
@@ -90,22 +103,18 @@ const Tours = () => {
                         {/* Card Three */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay="1.3s">
                                     <div className="card__picture card__picture--3">
                                         &nbsp;
                                         </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--3">
-                                            Beach Hangout
-                                            </span>
+                                            {this.state.title3}
+                                        </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>A Day Tour</li>
-                                            <li>Swimming</li>
-                                            <li>Kayaking</li>
-                                            <li>Boat Ride</li>
-                                            <li>Pedal Boating</li>
+                                        {this.state.lists3.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
@@ -114,7 +123,7 @@ const Tours = () => {
                                         <div className="card__cta">
                                             <div className="card__price-box">
                                                 <p className="card__price-only">Only</p>
-                                                <p className="card__price-value">#20000</p>
+                                                <p className="card__price-value">#{this.state.price3}</p>
                                             </div>
                                             <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
@@ -131,32 +140,28 @@ const Tours = () => {
                         {/* Card One */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front wow fadeInLeft" data-wow-dutarion="1s" data-wow-delay=".9s">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay="1.3s">
                                     <div className="card__picture card__picture--4">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--1">
-                                            DECEMBER HANG-OUT
+                                            {this.state.title4}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>A Day Tour</li>
-                                            <li>Visit To Whispering palm</li>
-                                            <li>Visit To First Story Building</li>
-                                            <li>Visit To Brazilian Baracoon</li>
-                                            <li>Visit To Point Of No Return</li>
+                                        {this.state.lists4.map(list => <li key={list}>{list}</li>)} 
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="card__side card__side--back card__side--back-1">
                                     <div className="card__cta">
                                         <div className="card__price-box">
-                                            <p class="card__price-only">Only</p>
-                                            <p class="card__price-value">#10000</p>
+                                            <p className="card__price-only">Only</p>
+                                            <p className="card__price-value">#{this.state.price4}</p>
                                         </div>
-                                        <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                        <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                     </div>
                                 </div>
                             </div>
@@ -166,33 +171,29 @@ const Tours = () => {
                         {/* Card Two */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".9s">
                                     <div className="card__picture card__picture--5">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--2">
-                                            Cultural Tour
+                                            {this.state.title5}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 Days Tour</li>
-                                            <li>Visit to Erinjiyan Ekiti</li>
-                                            <li>Visit to Oni Of Ife's Palace</li>
-                                            <li>Visit To Oba Of Lagos Palace</li>
-                                            <li>Visit To Osun/Oshogbo Shrine</li>
+                                        {this.state.lists5.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="card__side card__side--back card__side--back-2">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#20000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#{this.state.price5}</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -203,33 +204,29 @@ const Tours = () => {
                         {/* Card Three */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".5s">
                                     <div className="card__picture card__picture--6">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--3">
-                                            Abuja City Tour
+                                            {this.state.title6}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>3 Days Tour</li>
-                                            <li>Visit To Aso Rock</li>
-                                            <li>Visit Zuma Rock</li>
-                                            <li>Visit To Presidential Villa</li>
-                                            <li>Visit To Senate House</li>
+                                        {this.state.lists6.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="card__side card__side--back card__side--back-3">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#25000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#{this.state.price6}</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -244,32 +241,28 @@ const Tours = () => {
                         {/* Card One */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front wow fadeInLeft" data-wow-dutarion="1s" data-wow-delay=".9s">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".5s">
                                     <div className="card__picture card__picture--7">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--1">
-                                            Lagos city tour
+                                            {this.state.title7}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 days tours</li>
-                                            <li>One night in Eko Hotel</li>
-                                            <li>Visit To Eko Atlantic</li>
-                                            <li>Visit To Governor's Office</li>
-                                            <li>Visit To Tinubu's House</li>
+                                        {this.state.lists7.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="card__side card__side--back card__side--back-1">
                                     <div className="card__cta">
                                         <div className="card__price-box">
-                                            <p class="card__price-only">Only</p>
-                                            <p class="card__price-value">#40000</p>
+                                            <p className="card__price-only">Only</p>
+                                            <p className="card__price-value">#{this.state.price7}</p>
                                         </div>
-                                        <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                        <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,33 +272,29 @@ const Tours = () => {
                         {/* Card Two */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".9s">
                                     <div className="card__picture card__picture--8">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--2">
-                                            Lekki C Centre tour
+                                            {this.state.title8}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>A Day Tour</li>
-                                            <li>Swimming</li>
-                                            <li>Kayaking</li>
-                                            <li>Boat Ride</li>
-                                            <li>Pedal Boating</li>
+                                           {this.state.lists8.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="card__side card__side--back card__side--back-2">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#25000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#{this.state.price8}</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -315,34 +304,30 @@ const Tours = () => {
 
                         {/* Card Three */}
                         <div className="col-1-of-3">
-                            <div className="card">
-                                <div className="card__side card__side--front">
+                            <div className="card" data-wow-dutarion="1s" data-wow-delay="1.3s">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay="1.3s">
                                     <div className="card__picture card__picture--9">
                                         &nbsp;
                                 </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--3">
-                                            ALmart Resort tour
+                                            {this.state.title9}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>A Day Tour</li>
-                                            <li>Mountain Hiking</li>
-                                            <li>Swimming</li>
-                                            <li>Camp Fire</li>
-                                            <li>Photography</li>
+                                           {this.state.lists9.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="card__side card__side--back card__side--back-3">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#20000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#{this.state.price9}</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -357,32 +342,28 @@ const Tours = () => {
                         {/* Card One */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front wow fadeInLeft" data-wow-dutarion="1s" data-wow-delay=".9s">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay="1.3s">
                                     <div className="card__picture card__picture--10">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--1">
-                                            Abeokuta City Tour
+                                            {this.state.title10}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 days tours</li>
-                                            <li>Visit To Olumo Rock</li>
-                                            <li>Visit To Government House</li>
-                                            <li>Visit To Mapoly</li>
-                                            <li>Visit To OBASANJO'S Library</li>
+                                            {this.state.lists10.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="card__side card__side--back card__side--back-1">
                                     <div className="card__cta">
                                         <div className="card__price-box">
-                                            <p class="card__price-only">Only</p>
-                                            <p class="card__price-value">#40000</p>
+                                            <p className="card__price-only">Only</p>
+                                            <p className="card__price-value">#{this.state.price10}</p>
                                         </div>
-                                        <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                        <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                     </div>
                                 </div>
                             </div>
@@ -392,33 +373,29 @@ const Tours = () => {
                         {/* Card Two */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".9s">
                                     <div className="card__picture card__picture--11">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--2">
-                                            Kano City Tour
+                                            {this.state.title11}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 Days Tour</li>
-                                            <li>Visit To Emir's Palace</li>
-                                            <li>Visit To Government House</li>
-                                            <li>Visit To Kano's Market</li>
-                                            <li>Visit To University Of Kano</li>
+                                         {this.state.lists11.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="card__side card__side--back card__side--back-2">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#25000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#{this.state.price11}</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -429,33 +406,29 @@ const Tours = () => {
                         {/* Card Three */}
                         <div className="col-1-of-3">
                             <div className="card">
-                                <div className="card__side card__side--front">
+                                <div className="card__side card__side--front wow fadeIn" data-wow-dutarion="1s" data-wow-delay=".5s">
                                     <div className="card__picture card__picture--12">
                                         &nbsp;
                                     </div>
                                     <h4 className="card__heading">
                                         <span className="card__heading-span card__heading-span--3">
-                                            Benin City Tour
+                                            {this.state.title12}
                                         </span>
                                     </h4>
                                     <div className="card__details">
                                         <ul>
-                                            <li>2 Days Tour</li>
-                                            <li>Visit To Oba Of Benin Palace</li>
-                                            <li>Visit To UNIBEN</li>
-                                            <li>Camp Fire</li>
-                                            <li>Visit To Benin Market</li>
+                                          {this.state.lists12.map(list => <li key={list}>{list}</li>)}
                                         </ul>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="card__side card__side--back card__side--back-3">
                                         <div className="card__cta">
-                                            <div class="card__price-box">
-                                                <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#20000</p>
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">#{this.state.price12}</p>
                                             </div>
-                                            <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
+                                            <a href="tel: +2349018903141" className="btn btn__white margin-top-s">call to book</a>
                                         </div>
                                     </div>
                                 </div>
@@ -466,7 +439,7 @@ const Tours = () => {
                     </div>
                 </section>
                 <Footer />
-            </div>
+            </React.Fragment>
         )
     }
-    export default Tours;
+}

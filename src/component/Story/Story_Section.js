@@ -7,7 +7,7 @@ import './Story.css';
 export default class Story_Section extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
             <section className="section-stories">
                         <div className="bg-video">
                             <video className="bg-video__content" autoPlay muted loop>
@@ -58,7 +58,7 @@ export default class Story_Section extends Component {
                         </div>
                     </section>
                     {/* End Of Story Section*/}
-            </div>
+            </React.Fragment>
         )
     }
 }

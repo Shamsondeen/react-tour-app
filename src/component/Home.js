@@ -12,7 +12,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <React.Fragment>
             <Heading />
             <main>
                 <About_Section />
@@ -27,7 +27,7 @@ const Home = () => {
             </main>
             <Footer />
 
-        </div>
+        </React.Fragment>
     )
 }
 

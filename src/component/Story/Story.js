@@ -9,7 +9,7 @@ import './Story.css';
 export default class Story extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 {/*Story Section*/}
 
                 <section className="section-stories">
@@ -104,13 +104,11 @@ export default class Story extends Component {
                             </div>
                         </div>
                     </div>
-
-
                 </section>
                 {/* End Of Story Section*/}
                 <Footer />
 
-            </div>
+            </React.Fragment>
         )
     }
 }

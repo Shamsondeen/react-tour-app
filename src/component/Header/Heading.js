@@ -4,9 +4,12 @@ import logo from '../../ika.png';
 import './Heading.css'
 
 export default class Heading extends Component {
+    state = {
+        heading_primary: 'is where lifes happens'
+    }
     render() {
         return (
-            <div>
+            <React.Fragment>
             <header className="header">
                     <div className="header__logo-box">
                         <Link to="/">
@@ -16,7 +19,7 @@ export default class Heading extends Component {
                     <div className="header__text-box">
                         <h1 className="heading-primary">
                             <span className="heading-primary__main">Outdoors</span>
-                            <span class="heading-primary__sub">is where lifes happens</span>
+                            <span class="heading-primary__sub">{this.state.heading_primary}</span>
                         </h1>
 
                         
@@ -24,7 +27,7 @@ export default class Heading extends Component {
                        
                     </div>
                 </header>
-            </div>
+            </React.Fragment>
         )
     }
 }

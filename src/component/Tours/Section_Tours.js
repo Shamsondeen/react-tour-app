@@ -1,8 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 
 
 export default class Section_Tours extends Component {
+    
+    state = {
+        title: 'Badagry Xmas plore',
+        title2: 'Southwest Tour',
+        title3: 'Beach Hangout',
+        lists: [ '2 days tours', 'One night in whispering palm', 'Pedal boating', 'First Story Building', 'Bicycle Boaty'],
+        lists2: [ '7 Days Tour', ' Mountain Hiking', ' Swimming', 'Camp Fire', ' Visit To Erinjiyan Ekiti'],
+        lists3: [ 'A Day Tour', 'Swimming', 'Kayaking', ' Boat Ride', ' Pedal Boating'],
+        price: '40000',
+        price2: '25000',
+        price3: '20000'
+    };
+    
     render() {
         return (
             <div>
@@ -17,22 +30,18 @@ export default class Section_Tours extends Component {
                             {/* Card One */}
                             <div className="col-1-of-3">
                                 <div className="card">
-                                    <div className="card__side card__side--front wow fadeInLeft" data-wow-dutarion="1s" data-wow-delay=".9s">
+                                    <div className="card__side card__side--front wow fadeInLeft" data-wow-dutarion="1s" data-wow-delay=".8s">
                                         <div className="card__picture card__picture--1">
                                             &nbsp;
                                         </div>
                                         <h4 className="card__heading">
                                             <span className="card__heading-span card__heading-span--1">
-                                                Badagry Xmas plore
+                                                {this.state.title}
                                             </span>
                                         </h4>
                                         <div className="card__details">
                                             <ul>
-                                                <li>2 days tours</li>
-                                                <li>One night in whispering palm</li>
-                                                <li>Pedal boating</li>
-                                                <li>First Story Building</li>
-                                                <li>Bicycle Boaty</li>
+                                               {this.state.lists.map(list =><li>{list}</li>)}
                                             </ul>
                                         </div>
                                     </div>
@@ -40,7 +49,7 @@ export default class Section_Tours extends Component {
                                         <div className="card__cta">
                                             <div className="card__price-box">
                                                 <p class="card__price-only">Only</p>
-                                                <p class="card__price-value">#40000</p>
+                                                <p class="card__price-value">#{this.state.price}</p>
                                             </div>
                                             <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
                                         </div>
@@ -58,17 +67,13 @@ export default class Section_Tours extends Component {
                                         </div>
                                         <h4 className="card__heading">
                                             <span className="card__heading-span card__heading-span--2">
-                                                Southwest Tour
+                                                {this.state.title2}
                                             </span>
                                         </h4>
                                         <div className="card__details">
                                             <ul>
                                                 <ul>
-                                                    <li>7 Days Tour</li>
-                                                    <li>Mountain Hiking</li>
-                                                    <li>Swimming</li>
-                                                    <li>Camp Fire</li>
-                                                    <li>Visit To Erinjiyan Ekiti</li>
+                                                    {this.state.lists2.map(list => <li>{list}</li>)}
                                                 </ul>
                                             </ul>
                                         </div>
@@ -78,7 +83,7 @@ export default class Section_Tours extends Component {
                                             <div className="card__cta">
                                                 <div class="card__price-box">
                                                     <p class="card__price-only">Only</p>
-                                                    <p class="card__price-value">#25000</p>
+                                                    <p class="card__price-value">#{this.state.price2}</p>
                                                 </div>
                                                 <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
                                             </div>
@@ -90,23 +95,19 @@ export default class Section_Tours extends Component {
 
                             {/* Card Three */}
                             <div className="col-1-of-3">
-                                <div className="card">
-                                    <div className="card__side card__side--front">
+                                <div className="card" >
+                                    <div className="card__side card__side--front wow fadeInRight" data-wow-dutarion="1s" data-wow-delay="1s">
                                         <div className="card__picture card__picture--3">
                                             &nbsp;
                                         </div>
                                         <h4 className="card__heading">
                                             <span className="card__heading-span card__heading-span--3">
-                                                Beach Hangout
+                                                {this.state.title3}
                                             </span>
                                         </h4>
                                         <div className="card__details">
                                             <ul>
-                                                <li>A Day Tour</li>
-                                                <li>Swimming</li>
-                                                <li>Kayaking</li>
-                                                <li>Boat Ride</li>
-                                                <li>Pedal Boating</li>
+                                               {this.state.lists3.map(list => <li>{list}</li>)}
                                             </ul>
                                         </div>
                                     </div>
@@ -115,7 +116,7 @@ export default class Section_Tours extends Component {
                                             <div className="card__cta">
                                                 <div class="card__price-box">
                                                     <p class="card__price-only">Only</p>
-                                                    <p class="card__price-value">#20000</p>
+                                                    <p class="card__price-value">#{this.state.price3}</p>
                                                 </div>
                                                 <a href="tel: +2349018903141" class="btn btn__white margin-top-s">call to book</a>
                                             </div>
