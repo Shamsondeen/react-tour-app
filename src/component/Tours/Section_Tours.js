@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 
 
@@ -128,7 +129,7 @@ export default class Section_Tours extends Component {
                         </div>
                         {/*Button*/}
                         <div class="u-center-text u-margin-top-huge">
-                            <a href='/tours'className="btn btn__green">Discover all tours</a>
+                            <a componenetClass={Link} to='/tours'className="btn btn__green">Discover all tours</a>
                         </div>
                         {/* End Of Button*/}
                     </section>
